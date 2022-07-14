@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./cart.css">
+</head>
+<body>
+
+    <header id="navbar">
+        <img src="https://i.pinimg.com/originals/ef/d3/ff/efd3ff344eb66d42ce19875134855917.png" alt="" class="logo">
+        <span>
+            <button class="open-add">Add</button>
+            <button class="open-cart">Cart</button>
+        </span>
+    </header>
+
+    <section class="add-main">
+        <h1>In Add</h1>
+        <span>
+            <input type="text" name="" id="add-img" placeholder="Image...">
+            <input type="text" name="" id="add-name" placeholder="Name...">
+            <input type="text" name="" id="add-cost" placeholder="Cost...">
+            <button class="send-product">Add</button>
+        </span>
+    </section>
+
+    <section id="cart-main" class="cart-main">
+        <h1>In Cart</h1>
+        <nav class="incart-nav"></nav>
+        <h2 class="cart-total">Total </h2>
+    </section>
+
+    <main id="main-product">
+        <div class="grid-main">
+            <div class="loading-screen">
+                <div class="lds-hourglass"></div>
+            </div>
+
+        </div>
+    </main>
+
+    <script type="module" src="./cart.js"></script>
+</body>
+</html>

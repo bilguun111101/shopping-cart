@@ -1,0 +1,251 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    outline: none;
+    font-family: sans-serif;
+    border: none;
+    list-style: none;
+    text-decoration: none;
+    background: none;
+    color: #FFF;
+    margin: 0%;
+    padding: 0%;
+}
+
+button {cursor: pointer;}
+button:active {opacity: 0.5;}
+
+body {
+    background: #000;
+    transition: .1s;
+}
+
+#navbar {
+    border-bottom: 0.1px solid #FFF;
+    padding: 1rem 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 0 7px;
+    transition: .4s;
+    position: sticky;
+    top: 0%;
+    z-index: 10000;
+    background: #000;
+    left: 0%;
+    right: 0%;
+}
+
+#navbar img {
+    width: 30px;
+    height: auto;
+}
+#navbar span button {
+    font-size: 1.2em;
+}
+
+#main-product {
+    width: 100%;
+    height: auto;
+    padding: 2rem 10%;
+}
+
+.grid-main {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 1rem;
+    transition: .4s;
+}
+
+.grid-main .box {
+    height: auto;
+    cursor: pointer;
+}
+.product-img {
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+
+.product-img {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+.product-img img {
+    width: 100%;
+    height: auto;
+    transition: .2s;
+}
+.product-img img:hover {
+    transform: scale(1.2);
+    opacity: 0.7;
+}
+
+.product-img span {
+    width: 100%;
+    position: absolute;
+    left: 0%;
+    bottom: 4%;
+    display: flex;
+    justify-content: space-between;
+    transition: .4s;
+    opacity: 0;
+}
+
+.product-img:hover span {
+    padding: 0 0.6rem;
+    transition: .4s;
+    opacity: 1;
+}
+.product-img span h1 {
+    transition: .4s;
+    text-shadow: 0 0 3px #000;
+    font-size: 1.2rem;
+}
+
+.cart-main {
+    position: fixed;
+    z-index: 10000;
+    width: 30%;
+    height: 88vh;
+    right: -1000%;
+    background: #000;
+    transition: .4s;
+    padding: 1rem;
+    overflow-y: scroll;
+}
+@media (max-width: 900px) {
+    .cart-main {
+        width: 50%;
+        height: 100vh;
+    }
+}
+@media (max-width: 600px) {
+    .cart-main {
+        width: 100%;
+        height: 100vh;
+    }
+}
+
+.incart-nav {
+    height: 80%;
+    width: 100%;
+    overflow-y: scroll;
+}
+
+.cart-product {
+    width: 100%;
+    height: auto;
+    display: flex;
+    position: relative;
+    border: 1px solid #FFF;
+    margin-bottom: 1rem;
+}
+.cart-product img {
+    width: 50%;
+    height: auto;
+}
+.cart-product span {
+    width: 50%;
+    height: auto;
+    padding: 0.2rem;
+    flex-direction: column;
+}
+.cart-product span:first-child img {
+    width: 100%;
+    height: auto;
+}
+.cart-product span:last-child {
+    display: flex;
+    justify-content: space-around;
+}
+.close-cart {
+    position: absolute;
+    font-size: 1.4em;
+    top: 0.4rem;
+    right: 0.4rem;
+}
+#input-number {
+}
+
+.loading-screen {
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lds-hourglass {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+}
+.lds-hourglass:after {
+    content: " ";
+    display: block;
+    border-radius: 50%;
+    width: 0;
+    height: 0;
+    margin: 8px;
+    box-sizing: border-box;
+    border: 32px solid #fff;
+    border-color: #fff transparent #fff transparent;
+    animation: lds-hourglass 1.2s infinite;
+}
+@keyframes lds-hourglass {
+    0% {
+        transform: rotate(0);
+        animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    }
+    50% {
+        transform: rotate(900deg);
+        animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+    100% {
+        transform: rotate(1800deg);
+    }
+}
+
+.open-add {
+    margin-right: 2rem;
+}
+
+.add-main {
+    position: fixed;
+    width: 30vw;
+    height: 80vh;
+    left: -10000%;
+    transition: .4s;
+    background: #000;
+    z-index: 10000;
+    margin-top: 0.3rem;
+    padding: 1rem;
+}
+.add-main h1 {
+    margin-bottom: 1em;
+}
+.add-main span {}
+.add-main span input {
+    margin-bottom: 1rem;
+    width: 100%;
+    height: 2rem;
+    color: #FFF;
+    background: transparent;
+}
+.add-main span button {
+    font-size: 1.2rem;
+}
+.cart-total {
+    text-shadow: 0 0 3px #FFF;
+}
+
+.active-cart {
+    right: 0%;
+}
+.active-add {
+    left: 0%;
+}
